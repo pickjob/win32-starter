@@ -58,7 +58,7 @@ BOOL ShowLastError(LPTSTR lpDetail, LPTSTR lpTag) {
     nTotalLength += nLength;
     TCHAR szErrorInfo[nTotalLength + 100];
     hResult = StringCchPrintf(szErrorInfo, _countof(szErrorInfo), _T("%s(%d-%s)"), lpErrorText, nErrorCode, lpDetail);
-    if (!fOk) {
+    if (fOk) {
         LocalFree(lpErrorText);
     }
     if (FAILED(hResult)) {
