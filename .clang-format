@@ -1,0 +1,92 @@
+# 语言: Cpp Java Javascript
+Language: Cpp
+BasedOnStyle: LLVM
+# 一些设置
+ColumnLimit: 120
+SortIncludes: CaseInsensitive
+# RemoveBracesLLVM: false
+# SeparateDefinitionBlocks: Always
+# 排序
+# QualifierOrder: ['inline', 'static', 'type', 'const', 'volatile' ]
+# 缩进
+IndentWidth: 4
+PPIndentWidth: 4
+IndentCaseLabels: true
+IndentGotoLabels: true
+IndentAccessModifiers: true
+IndentWrappedFunctionNames: true
+IndentExternBlock: Indent
+LambdaBodyIndentation: Signature
+# 空格
+SpacesInAngles: false
+SpacesInParentheses: false
+SpacesInSquareBrackets: false
+SpacesInCStyleCastParentheses: false
+SpacesInConditionalStatement: false
+SpacesInContainerLiterals: false
+SpaceInEmptyBlock: false
+SpaceInEmptyParentheses: false
+SpaceBeforeCaseColon: false
+SpaceBeforeAssignmentOperators: true
+SpaceBeforeSquareBrackets: false
+SpaceBeforeCtorInitializerColon: false
+SpaceBeforeInheritanceColon: false
+SpaceBeforeRangeBasedForLoopColon: true
+SpaceAfterLogicalNot: false
+SpaceAfterCStyleCast: true
+SpaceBeforeParens: ControlStatements
+SpaceAroundPointerQualifiers: Before
+BitFieldColonSpacing: After
+SpacesInLineCommentPrefix:
+    Minimum: 1
+    Maximum: -1
+SpacesBeforeTrailingComments: 4
+# 大括号换行
+# InsertBraces: true
+BraceWrapping:
+    BeforeCatch: false
+    BeforeElse: false
+    BeforeWhile: false
+    AfterFunction: false
+    AfterCaseLabel: false
+    AfterStruct: false
+    AfterClass: true
+    AfterEnum: false
+    AfterUnion: false
+    AfterExternBlock: false
+    BeforeLambdaBody: false
+    SplitEmptyFunction: false
+    SplitEmptyRecord: false
+    AfterControlStatement: Never
+# 短语句处理
+AllowShortLoopsOnASingleLine: false
+AllowShortCaseLabelsOnASingleLine: false
+AllowShortEnumsOnASingleLine: false
+AllowShortIfStatementsOnASingleLine: Never
+AllowShortBlocksOnASingleLine: Never
+AllowShortLambdasOnASingleLine: None
+# AllowShortFunctionsOnASingleLine: None
+# 换行
+BreakStringLiterals: false
+BreakBeforeTernaryOperators: false
+BreakAfterJavaFieldAnnotations: true
+BreakBeforeBraces: Attach
+BreakBeforeBinaryOperators: All
+BreakConstructorInitializers: AfterColon
+BreakInheritanceList: AfterColon
+# 对齐
+BinPackParameters: false
+BinPackArguments: false
+AllowAllParametersOfDeclarationOnNextLine: false
+AllowAllArgumentsOnNextLine: false
+AlignTrailingComments: true
+AlignOperands: Align
+AlignAfterOpenBracket: Align
+AlignArrayOfStructures: Left
+AlignConsecutiveAssignments: AcrossEmptyLinesAndComments
+AlignConsecutiveMacros: AcrossEmptyLinesAndComments
+AlignConsecutiveBitFields: AcrossEmptyLinesAndComments
+AlignConsecutiveDeclarations: AcrossComments
+AlignEscapedNewlines: Left
+PointerAlignment: Left
+# QualifierAlignment: Left
