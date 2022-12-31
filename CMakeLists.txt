@@ -10,8 +10,4 @@ add_subdirectory(utils)
 
 add_subdirectory(0.hello_world)
 add_subdirectory(1.show_case)
-# add_subdirectory(2.error_lookup)
-
-# add_subdirectory(1.hello_dll)
-# add_subdirectory(3.win32_enum)
-# add_subdirectory(4.win32_pe)
+add_subdirectory(2.error_lookup)
