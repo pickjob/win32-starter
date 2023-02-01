@@ -10,7 +10,7 @@ int APIENTRY WinMain(HINSTANCE hInst, HINSTANCE hInstPrev, PSTR cmdline, int cmd
         MessageBox(NULL, _T("GetStdHandle"), lpShowCase, MB_OK);
         return EXIT_FAILURE;
     }
-    LPTSTR  lpGreetings      = _T("Hello World");
+    LPTSTR  lpGreetings      = _T("Hello World\n");
     size_t  nGreetingsLength = 0;
     HRESULT hResult          = StringCchLength(lpGreetings, STRSAFE_MAX_CCH, &nGreetingsLength);
     if (FAILED(hResult)) {
