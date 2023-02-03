@@ -13,7 +13,7 @@ int APIENTRY WinMain(HINSTANCE hInst, HINSTANCE hInstPrev, PSTR cmdline, int cmd
     LPTSTR lpShowCase = _T("Thread ShowCase");
     HANDLE hStdout    = GetStdHandle(STD_OUTPUT_HANDLE);
     if (hStdout == INVALID_HANDLE_VALUE) {
-        MessageBox(NULL, _T("GetStdHandle"), lpShowCase, MB_OK);
+        ShowLastError(_T("GetStdHandle"), lpShowCase);
         return EXIT_FAILURE;
     }
     ShowCreateThread(hStdout, lpShowCase);
@@ -57,7 +57,8 @@ VOID CALLBACK SimpleCallback(PTP_CALLBACK_INSTANCE callbackInstance, PVOID conte
     DWORD   dwCurrentThreadId = GetCurrentThreadId();
     TCHAR   szThreadInfo[50];
     size_t  nTotal;
-    HRESULT hResult = StringCchPrintf(szThreadInfo, _countof(szThreadInfo), _T("CurrentThreadId: %d\n"), dwCurrentThreadId);
+    HRESULT hResult
+        = StringCchPrintf(szThreadInfo, _countof(szThreadInfo), _T("CurrentThreadId: %d\n"), dwCurrentThreadId);
     if (FAILED(hResult)) {
         ShowLastError(_T("StringCchPrintf"), lpShowCase);
         return;

@@ -14,7 +14,7 @@ int APIENTRY WinMain(HINSTANCE hInst, HINSTANCE hInstPrev, PSTR cmdline, int cmd
     LPTSTR lpShowCase = _T("Process ShowCase");
     HANDLE hStdout    = GetStdHandle(STD_OUTPUT_HANDLE);
     if (hStdout == INVALID_HANDLE_VALUE) {
-        MessageBox(NULL, _T("GetStdHandle"), lpShowCase, MB_OK);
+        ShowLastError(_T("GetStdHandle"), lpShowCase);
         return EXIT_FAILURE;
     }
     // 进程环境变量
