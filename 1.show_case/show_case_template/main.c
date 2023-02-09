@@ -6,7 +6,7 @@
 int APIENTRY WinMain(HINSTANCE hInst, HINSTANCE hInstPrev, PSTR cmdline, int cmdshow) {
     LPTSTR lpShowCase = _T("ShowCase Template");
     HANDLE hStdout    = GetStdHandle(STD_OUTPUT_HANDLE);
-    if (hStdout == INVALID_HANDLE_VALUE) {
+    if (INVALID_HANDLE_VALUE == hStdout) {
         ShowLastError(_T("GetStdHandle"), lpShowCase);
         return EXIT_FAILURE;
     }
