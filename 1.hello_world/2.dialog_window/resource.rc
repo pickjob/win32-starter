@@ -1,0 +1,15 @@
+#include "resource.h"
+
+//
+// MANIFEST
+//      ID必须为1
+//
+IDM_MANIFEST    RT_MANIFEST    app.manifest
+
+IDD_MAIN DIALOGEX 0, 0, 170, 50
+CAPTION "HelloWin32"
+STYLE WS_CAPTION | WS_VISIBLE | WS_POPUPWINDOW | DS_CENTER
+FONT 14, "FiraCode NF"
+BEGIN
+    CONTROL "Hello Win32 Dialog", IDOK, WC_BUTTON, BS_PUSHBUTTON, 10, 10, 150, 30
+END

@@ -1,0 +1,76 @@
+---
+BasedOnStyle: LLVM
+
+UseTab: Never
+IndentWidth: 4
+ColumnLimit: 180                                    # 列限制
+LineEnding: LF
+IncludeBlocks: Regroup                              # 将多个 #include 块合并在一起，并按一个排序。然后根据类别优先级将其拆分为组
+
+AlignAfterOpenBracket: BlockIndent                  # 如果参数不能在一行上放，则始终在打开的括号后换行，关闭括号将放在新的一行
+AllowAllArgumentsOnNextLine: true                   # 如果函数调用或花括号初始化列表不适合一行，则允许将所有参数放到下一行
+AllowAllParametersOfDeclarationOnNextLine: true     # 如果函数声明不适合一行，则允许将函数声明的所有参数放到下一行
+BinPackArguments: false                             # 函数调用的参数将全部位于同一行，或者每个参数将占一行
+BinPackParameters: OnePerLine                       # 如果参数适合当前行，则将所有参数放在当前行。否则，将每个参数放在单独的行上
+
+# 保留哪些空行
+KeepEmptyLines:
+    AtEndOfFile: false
+    AtStartOfBlock: false
+    AtStartOfFile: false
+# 控制单个大括号包裹情况
+BreakBeforeBraces: Custom
+BraceWrapping:
+    AfterNamespace: false
+    AfterClass: false
+    AfterEnum: false
+    AfterStruct: false
+    AfterUnion: false
+    AfterFunction: false
+    SplitEmptyFunction: false
+    AfterControlStatement: Never
+    AfterCaseLabel: false
+    AfterExternBlock: false
+    BeforeCatch: false
+    BeforeElse: false
+    BeforeLambdaBody: false
+    BeforeWhile: false
+# 尾部注释的控制
+AlignTrailingComments:
+    Kind: Always                                    # 对齐尾部注释
+    OverEmptyLines: 2                               # 应用对齐的空行数
+# 对齐连续声明
+AlignConsecutiveDeclarations:
+    Enabled: true
+    AcrossComments: true                            # 跨注释
+    AcrossEmptyLines: true                          # 跨空行
+    AlignFunctionPointers: true                     # 函数指针
+    AlignFunctionDeclarations: true                 # 函数声明
+# 对齐连续赋值
+AlignConsecutiveAssignments:
+    Enabled: true
+    AcrossComments: true                            # 跨注释
+    AcrossEmptyLines: true                          # 跨空行
+    AlignCompound: true                             # 符合赋值
+    PadOperators: true                              # 是否将短赋值运算符左填充到与长运算符相同的长度
+# 对齐连续位域的样式
+AlignConsecutiveBitFields:
+    Enabled: true
+    AcrossEmptyLines: true                          # 是否跨越空行对齐
+    AcrossComments: true                            # 是否跨越注释对齐
+# 对齐连续短 case 标签
+AlignConsecutiveShortCaseStatements:
+    Enabled: true
+    AcrossComments: true                            # 跨注释
+    AcrossEmptyLines: true                          # 跨空行
+# 对齐连续宏定义
+AlignConsecutiveMacros:
+    Enabled: true
+    AcrossComments: true                            # 跨注释
+    AcrossEmptyLines: true                          # 跨空行
+---
+Language: Cpp
+---
+Language: JavaScript
+---
+Language: Json
